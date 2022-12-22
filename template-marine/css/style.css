@@ -1,7 +1,7 @@
 /* ------------------------------------------------------------------------------------------
  * Content
  * ------------------------------------------------------------------------------------------ */
-body {
+ body {
   color: #212529;
   background-color: #ffffff;
 }
@@ -529,7 +529,7 @@ ul.nav-tabs {
   margin: 0;
   border: none;
   border-radius: 0px 5px 0px 0px;
-  background: #181A22;
+  
   padding-top: 15px;
   box-shadow: 
     inset 0px 6px 4px -5px #000000,
@@ -551,8 +551,8 @@ ul.nav-tabs {
 .nav-tabs>li.active>a,
 .nav-tabs>li.active>a:focus,
 .nav-tabs>li.active>a:hover {
-  background-color: #282A36;
-  border: none;
+  background-color: #17a356;
+  border-radius: 10px;
 }
 
 /* ------------------------------------------------------------------------------------------
@@ -743,8 +743,8 @@ body::-webkit-scrollbar-thumb
 .section-example {
   padding: 0;
   height: 100%;
-  background: #36282a;
-  border-radius: 0px 5px 5px 0px;
+  background: #352836;
+
 }
 
 .full-pre {

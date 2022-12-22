@@ -127,7 +127,7 @@
 
 
   <script id="template-article" type="text/x-handlebars-template">
-    <div class="row pre-{{toLowerCase article.type}}" style="border-radius: 30px">
+    <div class="row pre-{{toLowerCase article.type}}" style="border-radius: 30px; background-color: rgb(238, 234, 242)">
     <div class="col-md-7 no-float">
       <article id="api-{{article.group}}-{{article.name}}-{{article.version}}" {{#if hidden}}class="hide"{{/if}} data-group="{{article.group}}" data-name="{{article.name}}" data-version="{{article.version}}">
         <div class="pull-left">
@@ -178,7 +178,7 @@
 
       </article>
     </div>
-    <div class="col-md-4 section-example no-float">
+    <div class="col-md-4 section-example no-float" style="border-radius: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
       {{#if_gt article.examples.length compare=0}}
         <ul class="nav nav-tabs nav-tabs-examples">
           {{#each article.examples}}
