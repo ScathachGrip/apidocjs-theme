@@ -4,6 +4,14 @@
 <head>
   <title>Loading...</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <<meta name="title" content="APIdoc">
+  <meta name="description" content="Inline Documentation for RESTful web APIs">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="APIdoc">
+  <meta property="og:description" content="Inline Documentation for RESTful web APIs">
+  <meta property="og:image" content="img/favicon.png">
+  <meta content="#FF00FF" name="theme-color" />
+  <meta content="#FF00FF" name="msapplication-navbutton-color" />
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link href="vendor/bootstrap.min.css" rel="stylesheet" media="screen">
   <link href="vendor/prettify.css" rel="stylesheet" media="screen">
@@ -28,7 +36,7 @@
     
     <div class="row">
       <div class="sidenav-search col-md-2">
-        <input class="form-control search" type="text" placeholder="{{__ "Search"}}">
+        <input class="form-control search" type="text" placeholder="{{__ "🔍Search here.."}}">
         <span class="search-reset">&#10005;</span>
         <span class="search-reset">&#10005;</span>
       </div>
@@ -127,7 +135,12 @@
 
 
   <script id="template-article" type="text/x-handlebars-template">
-    <div class="row pre-{{toLowerCase article.type}}" style="border-radius: 30px; background-color: rgb(238, 234, 242)">
+    <div class="row pre-{{toLowerCase article.type}}" style="border-radius: 30px; padding-left: 20px; border: 3px solid rgb(54, 57, 216);
+    padding-right: 20px; padding-top: 20px; 
+    padding-bottom: 20px; background-image: url('https://cdn.discordapp.com/attachments/1046495201176334467/1055466133316182148/sexsex.png');  
+    background-size: cover;
+    margin-bottom: 50px;
+    background-repeat:no-repeat;">
     <div class="col-md-7 no-float">
       <article id="api-{{article.group}}-{{article.name}}-{{article.version}}" {{#if hidden}}class="hide"{{/if}} data-group="{{article.group}}" data-name="{{article.name}}" data-version="{{article.version}}">
         <div class="pull-left">
@@ -178,7 +191,9 @@
 
       </article>
     </div>
-    <div class="col-md-4 section-example no-float" style="border-radius: 20px; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+    <div class="col-md-4 section-example no-float" style="border-radius: 30px; padding-left: 20px; 
+    padding-right: 20px; padding-top: 20px; 
+    padding-bottom: 20px; ">
       {{#if_gt article.examples.length compare=0}}
         <ul class="nav nav-tabs nav-tabs-examples">
           {{#each article.examples}}
@@ -231,7 +246,7 @@
     {{#each params.fields}}
       <div class="pull-left"><h4 class="headers">{{__ @key}}</h4></div>
       <div class="pull-right">
-        <button class="btn btn-xs json-schema" data-group="{{__ @key}}" data-param="{{../../paramType}}" >json</button>
+        <button class="btn btn-xs json-schema" data-group="{{__ @key}}" data-param="{{../../paramType}}" style="background-color: #5cb85c; text-align: center; font-size: 25px;">JSON</button>
       </div>
 
 
@@ -276,7 +291,7 @@
       <h2 class="hide-print">{{__ "Send a Sample Request"}}</h2>
       <form class="hide-print">
         <fieldset>
-          <div class="form-group">
+          <div class="form-group" style="width: 50%;">
             <div class="input-group">
               <span class="input-group-addon">{{__ "url"}}</span>
               <input type="text" class="form-control sample-request-url" value="{{article.sampleRequest.0.url}}" />
@@ -310,7 +325,7 @@
               {{#each this}}
               <div class="form-group">
                 <label for="sample-request-param-field-{{field}}">{{field}}</label>
-                <div class="input-group">
+                <div class="input-group" style="width: 30%;">
                   <input type="text" placeholder="{{field}}" class="form-control sample-request-param" data-sample-request-param-name="{{field}}" data-sample-request-param-group="sample-request-param-{{@../index}}">
                   <span class="input-group-addon">{{{type}}}</span>
                 </div>
@@ -332,7 +347,9 @@
                 <i class="glyphicon glyphicon-remove"></i>
               </button>
             </h4>
-            <pre class="prettyprint language-json" data-type="json"><code class="sample-request-response-json"></code></pre>
+            
+            <pre style="background-color: rgba(62, 59, 65, 0.721); border-radius: 15px;" class="prettyprint language-json" data-type="json"><font color="gold"><code class="sample-request-response-json"></code></font></pre>
+       
           </div>
 
         </fieldset>
