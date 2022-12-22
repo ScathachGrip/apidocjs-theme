@@ -127,7 +127,7 @@
 
 
   <script id="template-article" type="text/x-handlebars-template">
-    <div class="row pre-{{toLowerCase article.type}}">
+    <div class="row pre-{{toLowerCase article.type}}" style="border-radius: 30px">
     <div class="col-md-7 no-float">
       <article id="api-{{article.group}}-{{article.name}}-{{article.version}}" {{#if hidden}}class="hide"{{/if}} data-group="{{article.group}}" data-name="{{article.name}}" data-version="{{article.version}}">
         <div class="pull-left">
